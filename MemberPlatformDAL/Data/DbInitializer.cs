@@ -17,7 +17,7 @@ namespace MemberPlatformDAL.Data
                 //    return;   // DB has been seeded
                 //}
                 //context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                //context.Database.EnsureCreated();
                 if (!context.OptionTypes.Any())
                 {
                     context.OptionTypes.AddRange(
@@ -785,6 +785,7 @@ namespace MemberPlatformDAL.Data
                         }
                         );
                 }
+                context.SaveChanges();
             };
         }
     }
