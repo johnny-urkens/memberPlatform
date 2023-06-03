@@ -67,28 +67,28 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowAllOrigins",
-//        builder =>
-//        {
-//            builder.AllowAnyOrigin()
-//                   .AllowAnyHeader()
-//                   .AllowAnyMethod();
-//        });
-//});
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
         builder =>
         {
-            builder.WithOrigins("http://localhost:8900")
-                   .AllowCredentials()
+            builder.AllowAnyOrigin()
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
 });
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowAllOrigins",
+//        builder =>
+//        {
+//            builder.WithOrigins("http://localhost:8900")
+//                   .AllowCredentials()
+//                   .AllowAnyHeader()
+//                   .AllowAnyMethod();
+//        });
+//});
 
 builder.Services.Configure<AppSettings>(
     builder.Configuration.GetSection("ApplicationSettings"));
