@@ -17,9 +17,9 @@ namespace MemberPlatformDAL.Data
                 //    return;   // DB has been seeded
                 //}
                 //context.Database.EnsureDeleted();
-                //context.Database.EnsureCreated();
+                context.Database.EnsureCreated();
 
-                    context.OptionTypes.AddRange(
+                context.OptionTypes.AddRange(
                         new OptionTypeEntity
                         {
                         // id = 1
@@ -74,9 +74,9 @@ namespace MemberPlatformDAL.Data
                         Name = "SalesItem"
                         }
                         );
-                    context.SaveChanges();
+                context.SaveChanges();
 
-                    context.Options.AddRange(
+                context.Options.AddRange(
                         // Type of events
                         new OptionEntity
                         {
