@@ -18,8 +18,7 @@ namespace MemberPlatformDAL.Data
                 //}
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
-                if (!context.OptionTypes.Any())
-                {
+
                     context.OptionTypes.AddRange(
                         new OptionTypeEntity
                         {
@@ -784,8 +783,7 @@ namespace MemberPlatformDAL.Data
                             PersonId = 1,
                         }
                         );
-                }
-                context.SaveChanges();
+
             };
         }
     }
