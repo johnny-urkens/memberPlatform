@@ -12,7 +12,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["MemberPlatformApi/MemberPlatformApi.csproj", "MemberPlatformApi/"]
 COPY ["MemberPlatformCore/MemberPlatformCore.csproj", "MemberPlatformCore/"]
-COPY ["MemberPlatformDAL/UMemberPlatformDAL.csproj", "MemberPlatformDAL/"]
+COPY ["MemberPlatformDAL/MemberPlatformDAL.csproj", "MemberPlatformDAL/"]
 RUN dotnet restore "MemberPlatformApi/MemberPlatformApi.csproj"
 COPY . .
 WORKDIR "/src/MemberPlatformApi"
