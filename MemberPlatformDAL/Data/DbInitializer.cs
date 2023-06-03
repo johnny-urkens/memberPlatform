@@ -16,7 +16,7 @@ namespace MemberPlatformDAL.Data
                 //{
                 //    return;   // DB has been seeded
                 //}
-                context.Database.EnsureDeleted();
+                //context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
                 context.OptionTypes.AddRange(
                     new OptionTypeEntity
@@ -365,6 +365,7 @@ namespace MemberPlatformDAL.Data
                         AddressTypeId = 27,
                     });
                 context.SaveChanges();
+
 
                 context.Persons.AddRange(
                     new PersonEntity
