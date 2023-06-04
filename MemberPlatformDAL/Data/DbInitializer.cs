@@ -6,6 +6,7 @@ namespace MemberPlatformDAL.Data
 {
     public class DbInitializer
     {
+
         public static void Initialize(IServiceProvider serviceProvider)
         {
             using (var context = new DataContext(
@@ -17,7 +18,9 @@ namespace MemberPlatformDAL.Data
                 //    return;   // DB has been seeded
                 //}
                 //context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                //context.Database.EnsureCreated();
+                //test
+
 
                 context.OptionTypes.AddRange(
                         new OptionTypeEntity
@@ -72,8 +75,14 @@ namespace MemberPlatformDAL.Data
                         {
                         // id = 10
                         Name = "SalesItem"
+                        },
+                        new OptionTypeEntity
+                        {
+                            // id = 1
+                            Name = "testItem"
                         }
                         );
+                
                 context.SaveChanges();
 
                 context.Options.AddRange(
