@@ -31,8 +31,8 @@ namespace MemberPlatformDAL.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=MemberPlatformApi;Initial Catalog=MemberPlatformApi;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-                //optionsBuilder.UseSqlServer("Server=MemberPlatformApi;Database=master;User=sa;Password=S3cur3P@ssW0rd!;");
+                //optionsBuilder.UseSqlServer("Data Source=MemberPlatformApi;Initial Catalog=MemberPlatformApi;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                optionsBuilder.UseSqlServer("Server=MemberPlatformApi;Database=master;User=sa;Password=S3cur3P@ssW0rd!;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
 
