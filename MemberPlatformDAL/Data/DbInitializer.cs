@@ -79,7 +79,7 @@ namespace MemberPlatformDAL.Data
                         new OptionTypeEntity
                         {
                             // id = 1
-                            Name = "testItem"
+                            Name = "Item"
                         }
                         );
                 

@@ -133,6 +133,8 @@ using (var scope = app.Services.CreateScope())
     DbInitializer.Initialize(services);
 }
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -151,4 +153,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
 
