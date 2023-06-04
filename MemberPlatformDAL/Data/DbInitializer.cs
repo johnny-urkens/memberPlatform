@@ -18,7 +18,7 @@ namespace MemberPlatformDAL.Data
                 //    return;   // DB has been seeded
                 //}
                 //context.Database.EnsureDeleted();
-                //context.Database.EnsureCreated();
+                context.Database.EnsureCreated();
                 //test
 
 

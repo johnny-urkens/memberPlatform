@@ -11,7 +11,7 @@ namespace MemberPlatformDAL.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
             //optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=MemberPlatformApi;Trusted_Connection=True;MultipleActiveResultSets=true");
-            optionsBuilder.UseSqlServer("Server=MemberPlatformApi;Database=master;User=sa;Password=S3cur3P@ssW0rd!;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=db1;Database=master;User=sa;Password=S3cur3P@ssW0rd!;");
 
             return new DataContext(optionsBuilder.Options);
         }
