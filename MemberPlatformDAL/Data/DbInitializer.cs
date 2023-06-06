@@ -20,288 +20,289 @@ namespace MemberPlatformDAL.Data
                 //context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
                 //test
+                if (!context.OptionTypes.Any())
+                {
 
-
-                context.OptionTypes.AddRange(
-                        new OptionTypeEntity
-                        {
-                        // id = 1
-                        Name = "Format"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 2
-                        Name = "Sport"
-                        },
-                        // Contract type (Subscription, trainer, sponsor, admin)
-                        new OptionTypeEntity
-                        {
-                        // id = 3
-                        Name = "ContractType"
-                        },
-                        // Contract involvement role (Westfit, sponsor, participant, trainer)
-                        new OptionTypeEntity
-                        {
-                        // id = 4
-                        Name = "Role"
-                        },
-                        // Platform role (member, trainer, admin)
-                        new OptionTypeEntity
-                        {
-                        // id = 5
-                        Name = "PlatformRole"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 6
-                        Name = "Status"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 7
-                        Name = "DocumentType"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 8
-                        Name = "Address"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 9
-                        Name = "DiscountType"
-                        },
-                        new OptionTypeEntity
-                        {
-                        // id = 10
-                        Name = "SalesItem"
-                        },
-                        new OptionTypeEntity
-                        {
+                    context.OptionTypes.AddRange(
+                            new OptionTypeEntity
+                            {
+                            // id = 1
+                            Name = "Format"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 2
+                            Name = "Sport"
+                            },
+                            // Contract type (Subscription, trainer, sponsor, admin)
+                            new OptionTypeEntity
+                            {
+                            // id = 3
+                            Name = "ContractType"
+                            },
+                            // Contract involvement role (Westfit, sponsor, participant, trainer)
+                            new OptionTypeEntity
+                            {
+                            // id = 4
+                            Name = "Role"
+                            },
+                            // Platform role (member, trainer, admin)
+                            new OptionTypeEntity
+                            {
+                            // id = 5
+                            Name = "PlatformRole"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 6
+                            Name = "Status"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 7
+                            Name = "DocumentType"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 8
+                            Name = "Address"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 9
+                            Name = "DiscountType"
+                            },
+                            new OptionTypeEntity
+                            {
+                            // id = 10
+                            Name = "SalesItem"
+                            },
+                            new OptionTypeEntity
+                            {
                             // id = 1
                             Name = "Item"
-                        }
-                        );
-                
-                context.SaveChanges();
+                            }
+                            );
 
-                context.Options.AddRange(
-                        // Type of events
-                        new OptionEntity
-                        {
-                        // id = 1
-                        Name = "Single day event",
-                            OptionTypeId = 1,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 2
-                        Name = "Multi day event",
-                            OptionTypeId = 1,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 3
-                        Name = "Training series",
-                            OptionTypeId = 1,
-                        },
+                    context.SaveChanges();
 
-                        // Sports
-                        new OptionEntity
-                        {
-                        // id = 4
-                        Name = "Triatlon",
-                            OptionTypeId = 2,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 5
-                        Name = "Runnning",
-                            OptionTypeId = 2,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 6
-                        Name = "Swimming",
-                            OptionTypeId = 2,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 7
-                        Name = "Mountainbike",
-                            OptionTypeId = 2,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 8
-                        Name = "Start to triatlon",
-                            OptionTypeId = 2,
-                        },
+                    context.Options.AddRange(
+                            // Type of events
+                            new OptionEntity
+                            {
+                            // id = 1
+                            Name = "Single day event",
+                                OptionTypeId = 1,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 2
+                            Name = "Multi day event",
+                                OptionTypeId = 1,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 3
+                            Name = "Training series",
+                                OptionTypeId = 1,
+                            },
 
-                        // Contract types
-                        new OptionEntity
-                        {
-                        // id = 9
-                        Name = "Subscription",
-                            OptionTypeId = 3
-                        },
-                        new OptionEntity
-                        {
-                        // id = 10
-                        Name = "Trainer",
-                            OptionTypeId = 3
-                        },
-                        new OptionEntity
-                        {
-                        // id = 11
-                        Name = "Sponsor",
-                            OptionTypeId = 3
-                        },
-                        new OptionEntity
-                        {
-                        // id = 12
-                        Name = "Admin",
-                            OptionTypeId = 3
-                        },
+                            // Sports
+                            new OptionEntity
+                            {
+                            // id = 4
+                            Name = "Triatlon",
+                                OptionTypeId = 2,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 5
+                            Name = "Runnning",
+                                OptionTypeId = 2,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 6
+                            Name = "Swimming",
+                                OptionTypeId = 2,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 7
+                            Name = "Mountainbike",
+                                OptionTypeId = 2,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 8
+                            Name = "Start to triatlon",
+                                OptionTypeId = 2,
+                            },
 
-                        // Involvement roles
-                        new OptionEntity
-                        {
-                        // id = 13
-                        Name = "Participant",
-                            OptionTypeId = 4
-                        },
-                        new OptionEntity
-                        {
-                        // id = 14
-                        Name = "Trainer",
-                            OptionTypeId = 4
-                        },
-                        new OptionEntity
-                        {
-                        // id = 15
-                        Name = "Sponsor",
-                            OptionTypeId = 4
-                        },
-                        new OptionEntity
-                        {
-                        // id = 16
-                        Name = "Westfit",
-                            OptionTypeId = 4
-                        },
+                            // Contract types
+                            new OptionEntity
+                            {
+                            // id = 9
+                            Name = "Subscription",
+                                OptionTypeId = 3
+                            },
+                            new OptionEntity
+                            {
+                            // id = 10
+                            Name = "Trainer",
+                                OptionTypeId = 3
+                            },
+                            new OptionEntity
+                            {
+                            // id = 11
+                            Name = "Sponsor",
+                                OptionTypeId = 3
+                            },
+                            new OptionEntity
+                            {
+                            // id = 12
+                            Name = "Admin",
+                                OptionTypeId = 3
+                            },
 
-                        // Platform roles
-                        new OptionEntity
-                        {
-                        // id = 17
-                        Name = "Member",
-                            OptionTypeId = 5
-                        },
-                        new OptionEntity
-                        {
-                        // id = 18
-                        Name = "Trainer",
-                            OptionTypeId = 5
-                        },
-                        new OptionEntity
-                        {
-                        // id = 19
-                        Name = "Admin",
-                            OptionTypeId = 5
-                        },
+                            // Involvement roles
+                            new OptionEntity
+                            {
+                            // id = 13
+                            Name = "Participant",
+                                OptionTypeId = 4
+                            },
+                            new OptionEntity
+                            {
+                            // id = 14
+                            Name = "Trainer",
+                                OptionTypeId = 4
+                            },
+                            new OptionEntity
+                            {
+                            // id = 15
+                            Name = "Sponsor",
+                                OptionTypeId = 4
+                            },
+                            new OptionEntity
+                            {
+                            // id = 16
+                            Name = "Westfit",
+                                OptionTypeId = 4
+                            },
 
-                        // Statuses
-                        new OptionEntity
-                        {
-                        // id = 20
-                        Name = "Submitted",
-                            OptionTypeId = 6,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 21
-                        Name = "Cancelled",
-                            OptionTypeId = 6,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 22
-                        Name = "Approved",
-                            OptionTypeId = 6,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 23
-                        Name = "Not approved",
-                            OptionTypeId = 6,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 24
-                        Name = "Action needed",
-                            OptionTypeId = 6,
-                        },
-                        new OptionEntity
-                        {
-                        // id = 25
-                        Name = "Pending",
-                            OptionTypeId = 6
-                        },
+                            // Platform roles
+                            new OptionEntity
+                            {
+                            // id = 17
+                            Name = "Member",
+                                OptionTypeId = 5
+                            },
+                            new OptionEntity
+                            {
+                            // id = 18
+                            Name = "Trainer",
+                                OptionTypeId = 5
+                            },
+                            new OptionEntity
+                            {
+                            // id = 19
+                            Name = "Admin",
+                                OptionTypeId = 5
+                            },
 
-                        // Address types
-                        new OptionEntity
-                        {
-                        // id = 26
-                        Name = "Training facility",
-                            OptionTypeId = 8
-                        },
-                        new OptionEntity
-                        {
-                        // id = 27
-                        Name = "Residential",
-                            OptionTypeId = 8
-                        },
+                            // Statuses
+                            new OptionEntity
+                            {
+                            // id = 20
+                            Name = "Submitted",
+                                OptionTypeId = 6,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 21
+                            Name = "Cancelled",
+                                OptionTypeId = 6,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 22
+                            Name = "Approved",
+                                OptionTypeId = 6,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 23
+                            Name = "Not approved",
+                                OptionTypeId = 6,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 24
+                            Name = "Action needed",
+                                OptionTypeId = 6,
+                            },
+                            new OptionEntity
+                            {
+                            // id = 25
+                            Name = "Pending",
+                                OptionTypeId = 6
+                            },
 
-                        // Reduction types
-                        new OptionEntity
-                        {
-                        // id = 28
-                        Name = "Sponsor reduction",
-                            OptionTypeId = 9
-                        },
-                        // Sales item types
-                        new OptionEntity
-                        {
-                        // id = 29
-                        Name = "Bikes",
-                            OptionTypeId = 10
-                        },
-                        new OptionEntity
-                        {
-                        // id = 30
-                        Name = "Bike shoes",
-                            OptionTypeId = 10
-                        },
-                        new OptionEntity
-                        {
-                        // id = 31
-                        Name = "Trisuit",
-                            OptionTypeId = 10
-                        },
-                        new OptionEntity
-                        {
-                        // id = 32
-                        Name = "Wetsuit",
-                            OptionTypeId = 10
-                        }
-                     );
+                            // Address types
+                            new OptionEntity
+                            {
+                            // id = 26
+                            Name = "Training facility",
+                                OptionTypeId = 8
+                            },
+                            new OptionEntity
+                            {
+                            // id = 27
+                            Name = "Residential",
+                                OptionTypeId = 8
+                            },
+
+                            // Reduction types
+                            new OptionEntity
+                            {
+                            // id = 28
+                            Name = "Sponsor reduction",
+                                OptionTypeId = 9
+                            },
+                            // Sales item types
+                            new OptionEntity
+                            {
+                            // id = 29
+                            Name = "Bikes",
+                                OptionTypeId = 10
+                            },
+                            new OptionEntity
+                            {
+                            // id = 30
+                            Name = "Bike shoes",
+                                OptionTypeId = 10
+                            },
+                            new OptionEntity
+                            {
+                            // id = 31
+                            Name = "Trisuit",
+                                OptionTypeId = 10
+                            },
+                            new OptionEntity
+                            {
+                            // id = 32
+                            Name = "Wetsuit",
+                                OptionTypeId = 10
+                            }
+                         );
                     context.SaveChanges();
 
                     context.Addresses.AddRange(
                         new AddressEntity
                         {
-                        // id = 1
-                        Name = "Boswachtershuis",
+                            // id = 1
+                            Name = "Boswachtershuis",
                             Street = "Bosstraat",
                             Number = "1",
                             City = "Westerlo",
@@ -311,8 +312,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 2
-                        Street = "Kerkstraat",
+                            // id = 2
+                            Street = "Kerkstraat",
                             Number = "4",
                             Box = "3",
                             City = "Geel",
@@ -322,8 +323,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 3
-                        Street = "Bergstraat",
+                            // id = 3
+                            Street = "Bergstraat",
                             Number = "3",
                             City = "Turnhout",
                             PostalCode = "2300",
@@ -332,8 +333,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 4
-                        Street = "Lennostraat",
+                            // id = 4
+                            Street = "Lennostraat",
                             Number = "4",
                             Box = "3",
                             City = "Geel",
@@ -343,8 +344,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 5
-                        Street = "Lyasstraat",
+                            // id = 5
+                            Street = "Lyasstraat",
                             Number = "4",
                             Box = "3",
                             City = "Geel",
@@ -354,8 +355,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 6
-                        Street = "Westfit Admin straat",
+                            // id = 6
+                            Street = "Westfit Admin straat",
                             Number = "1",
                             Box = "1",
                             City = "Geel",
@@ -365,8 +366,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new AddressEntity
                         {
-                        // id = 7
-                        Street = "Westfit Member straat",
+                            // id = 7
+                            Street = "Westfit Member straat",
                             Number = "1",
                             Box = "2",
                             City = "Geel",
@@ -380,8 +381,8 @@ namespace MemberPlatformDAL.Data
                     context.Persons.AddRange(
                         new PersonEntity
                         {
-                        // id = 1
-                        FirstName = "Lode",
+                            // id = 1
+                            FirstName = "Lode",
                             LastName = "Bosmans",
                             Gender = "male",
                             DateOfBirth = DateTime.Parse("1985-01-01"),
@@ -395,8 +396,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new PersonEntity
                         {
-                        // id = 2
-                        FirstName = "Ive",
+                            // id = 2
+                            FirstName = "Ive",
                             LastName = "Verstappen",
                             Gender = "male",
                             DateOfBirth = DateTime.Now,
@@ -409,8 +410,8 @@ namespace MemberPlatformDAL.Data
                             ParentId = null
                         }, new PersonEntity
                         {
-                        // id = 3
-                        FirstName = "Johnny",
+                            // id = 3
+                            FirstName = "Johnny",
                             LastName = "Urkens",
                             Gender = "Male",
                             DateOfBirth = DateTime.Parse("1974-04-09"),
@@ -423,8 +424,8 @@ namespace MemberPlatformDAL.Data
                             ParentId = null
                         }, new PersonEntity
                         {
-                        // id = 4
-                        FirstName = "Admin",
+                            // id = 4
+                            FirstName = "Admin",
                             LastName = "Westfit",
                             Gender = "Female",
                             DateOfBirth = DateTime.Parse("1979-01-01"),
@@ -437,8 +438,8 @@ namespace MemberPlatformDAL.Data
                             ParentId = null
                         }, new PersonEntity
                         {
-                        // id = 5
-                        FirstName = "Member",
+                            // id = 5
+                            FirstName = "Member",
                             LastName = "Westfit",
                             Gender = "Male",
                             DateOfBirth = DateTime.Parse("1983-01-01"),
@@ -452,8 +453,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new PersonEntity
                         {
-                        // id = 6
-                        FirstName = "Lenno",
+                            // id = 6
+                            FirstName = "Lenno",
                             LastName = "Bosmans",
                             Gender = "male",
                             DateOfBirth = DateTime.Parse("2015-01-01"),
@@ -467,8 +468,8 @@ namespace MemberPlatformDAL.Data
                         },
                         new PersonEntity
                         {
-                        // id = 7
-                        FirstName = "Lyas",
+                            // id = 7
+                            FirstName = "Lyas",
                             LastName = "Bosmans",
                             Gender = "male",
                             DateOfBirth = DateTime.Parse("2010-01-01"),
@@ -482,8 +483,8 @@ namespace MemberPlatformDAL.Data
                         },
                          new PersonEntity
                          {
-                         // id = 8
-                         FirstName = "Emiel",
+                             // id = 8
+                             FirstName = "Emiel",
                              LastName = "Urkens",
                              Gender = "male",
                              DateOfBirth = DateTime.Parse("2015-03-12"),
@@ -497,8 +498,8 @@ namespace MemberPlatformDAL.Data
                          },
                         new PersonEntity
                         {
-                        // id = 9
-                        FirstName = "Warre",
+                            // id = 9
+                            FirstName = "Warre",
                             LastName = "Urkens",
                             Gender = "male",
                             DateOfBirth = DateTime.Parse("2008-01-01"),
@@ -567,60 +568,60 @@ namespace MemberPlatformDAL.Data
                     context.Contracts.AddRange(
                         new ContractEntity
                         {
-                        // id = 1
-                        ContractDate = DateTime.Now,
+                            // id = 1
+                            ContractDate = DateTime.Now,
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2023, 12, 31),
                             ContractTypeId = 9,
                         },
                         new ContractEntity
                         {
-                        // id = 2
-                        ContractDate = new DateTime(2022, 02, 20),
+                            // id = 2
+                            ContractDate = new DateTime(2022, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2023, 12, 31),
                             ContractTypeId = 9,
                         },
                         new ContractEntity
                         {
-                        // id = 3
-                        ContractDate = new DateTime(2022, 02, 20),
+                            // id = 3
+                            ContractDate = new DateTime(2022, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2023, 12, 31),
                             ContractTypeId = 9,
                         },
                         new ContractEntity
                         {
-                        // id = 4
-                        // Contract Lode
-                        ContractDate = new DateTime(2023, 02, 20),
+                            // id = 4
+                            // Contract Lode
+                            ContractDate = new DateTime(2023, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2099, 12, 31),
                             ContractTypeId = 12,
                         },
                         new ContractEntity
                         {
-                        // id = 5
-                        // Contract Johnny
-                        ContractDate = new DateTime(2023, 02, 20),
+                            // id = 5
+                            // Contract Johnny
+                            ContractDate = new DateTime(2023, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2099, 12, 31),
                             ContractTypeId = 12,
                         },
                         new ContractEntity
                         {
-                        // id = 6
-                        // Contract Admin westfit
-                        ContractDate = new DateTime(2023, 02, 20),
+                            // id = 6
+                            // Contract Admin westfit
+                            ContractDate = new DateTime(2023, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2099, 12, 31),
                             ContractTypeId = 12,
                         },
                         new ContractEntity
                         {
-                        // id = 7
-                        // Contract member westfit
-                        ContractDate = new DateTime(2023, 02, 20),
+                            // id = 7
+                            // Contract member westfit
+                            ContractDate = new DateTime(2023, 02, 20),
                             StartDate = new DateTime(2023, 1, 1),
                             EndDate = new DateTime(2099, 12, 31),
                             ContractTypeId = 12,
@@ -666,29 +667,29 @@ namespace MemberPlatformDAL.Data
                         },
                         new ContractPersonInvolvementEntity
                         {
-                        // Contract Lode admin
-                        ContractId = 4,
+                            // Contract Lode admin
+                            ContractId = 4,
                             PersonId = 1,
                             RoleId = 19,
                         },
                         new ContractPersonInvolvementEntity
                         {
-                        // Contract Johnny admin
-                        ContractId = 5,
+                            // Contract Johnny admin
+                            ContractId = 5,
                             PersonId = 3,
                             RoleId = 19,
                         },
                         new ContractPersonInvolvementEntity
                         {
-                        // Contract westfit admin
-                        ContractId = 6,
+                            // Contract westfit admin
+                            ContractId = 6,
                             PersonId = 4,
                             RoleId = 19,
                         },
                         new ContractPersonInvolvementEntity
                         {
-                        // Contract westfit member
-                        ContractId = 7,
+                            // Contract westfit member
+                            ContractId = 7,
                             PersonId = 5,
                             RoleId = 17,
                         }
@@ -792,7 +793,7 @@ namespace MemberPlatformDAL.Data
                             PersonId = 1,
                         }
                         );
-
+                }
             };
         }
     }
